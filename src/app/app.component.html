@@ -1,0 +1,30 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <p *ngFor="let incident of incidents">
+  {{incident.id}}
+</p> -->
+<app-header></app-header>
+<div class="main">
+    <div class="row">
+        <div class="card">
+            <h2>Large Cyber Incidents By Industry</h2>
+            <app-bar-chart *ngIf="incidents" [incidentsBars]="incidents"></app-bar-chart>
+        </div>
+        <div class="card">
+          <h2>This is a datatable</h2>
+          <table>
+            <tr *ngFor="let incident of incidents">
+              <td class="label">{{incident.label}}</td>
+              <td>{{incident.industry}}</td>
+              <td>{{incident.large}}</td>
+              <td>{{incident.small}}</td>
+              <td>{{incident.unknown}}</td>
+              <td>{{incident.total}}</td>
+              <td><button (click)="delete(incident)">Remove</button></td>
+            </tr>
+          </table>
+              
+        </div>
+    </div>
+  </div>
+
+<router-outlet></router-outlet>

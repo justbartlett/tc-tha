@@ -1,0 +1,32 @@
+.bar-chart {
+  height: 100%;
+  width: 100%;
+  min-height: 340px;
+  @media (max-width:480px) {
+    min-height: 200px;
+    max-width: 350px;
+  }
+  .axis-x {
+    display:none; 
+  }
+  .axis-y {
+    path {
+      stroke: none;
+    }
+    line {
+      stroke: #2e2e4a;
+    }
+    text {
+      fill: #52547d;
+      font-size: 12px;
+    }
+    
+  }
+}
+
+.bar {
+
+}
+.bar:nth-child(even) {
+  fill: url('#Gradient2');
+}

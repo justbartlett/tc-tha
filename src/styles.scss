@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~normalize.css/normalize.css';
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(#a46afc, #56468f, #423d73);
+    padding: 32px;
+    min-height: 100vh;
+    transition: padding ease-in-out 0.4s;
+}
+
+@media (max-width: 767.98px) {
+    body {
+        padding: 0;
+        transition: padding ease-in-out 0.4s;
+    }
+}

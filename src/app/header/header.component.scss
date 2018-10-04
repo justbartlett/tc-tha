@@ -1,0 +1,116 @@
+.upper, .lower {
+    height: 56px;
+    ul {
+        height: 56px;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+.upper {
+    background: #6a93ff;
+    padding: 0 32px;
+    @media (max-width: 767.98px) {
+        padding: 0 16px;
+    }
+    color: #fff;
+    ul {
+        justify-content: space-between;
+        .user {
+            margin: 0 24px 0 auto;
+            display: flex;
+            align-items: center;
+            span {
+                font-size: 14px;
+                line-height: 32px;
+                margin-right: 12px
+            }
+        }
+        li.logo {
+            display: flex;
+            align-items: center;
+            i {
+                font-size:28px;
+                margin-right: 6px;
+            }
+            span {
+                font-size:19px;
+                line-height: 56px;
+            }
+        }
+        i {
+            color: #fff;
+        }
+        img {
+            height: 32px;
+        }
+    }
+}
+
+.lower {
+    background: #282840;
+    padding: 0 32px;
+    @media (max-width: 767.98px) {
+        padding: 0 16px;
+    }
+    ul {
+        //justify-content: space-between;
+        li {
+            font-size: 13px;
+            line-height: 56px;
+            color: #656599;
+            height: 56px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            margin: 0 12px;
+            &:first-child {
+                margin: 0 12px 0 0;
+            }
+            &:last-child {
+                margin: 0 0 0 12px;
+            }
+            &.active {
+                color:#6993ff;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    height: 2px;
+                    width: 100%;
+                    display:block;
+                    background: #6993ff;
+                }
+            }
+            &.search {
+                margin-left: auto;
+                position: relative;
+                @media (max-width: 767.98px) {
+                    display: none;
+                }
+                i.material-icons {
+                    padding-top: 14px;
+                    font-size: 28px;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 8px;
+                    right: 0;
+                    height: 1px;
+                    width: 200px;
+                    display:block;
+                    background: #333251;
+                }
+            }
+        }
+    }
+}
